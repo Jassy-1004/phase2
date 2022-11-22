@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Archer's Network</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<img class="logo" src="images/arch_logo.png" alt="">
+
+		<nav>
+			<div class="search">
+				<input type="text" placeholder="Search" required>
+				<button>Search</button>
+			</div>
+			
+			<div class="menu">
+				<ul class="link">
+					<li><a href="main">Home</a></li>
+					<li><a href="contactus">Contact Us</a></li>
+					<li><a href="aboutus">About Us</a></li>
+					<li><a href="login">Log In</a></li>
+					<li><a href="registration">Register</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+<!--COPY UP TO HERE!!!!!-->
+	
+				<form onsubmit="event.preventDefault();"> <!-- prevents the jss from doing its thing -->
+				<label for="headline">Headline:</label>
+				<input type="text" id="headline" name="headline" placeholder="Article name.." required value="<%= readArticle[0].title%>" readonly>
+				  
+				<label for="byline">Written By:</label> 
+				<input type="text" id="byline" name="byline" placeholder="Kimi no Name" required value="<%= readArticle[0].authors%>" readonly><br>
+
+				<label for="datewritten">Date: </label> 
+				<input type="date" id="datewritten" name="datewritten" required value="<%= readArticle[0].dates%>" readonly>
+				
+
+				<label for="category">Categories</label>
+				<select id="category" name="category" required readonly>
+					<option value="null" disabled>Select your option</option>
+			        <option value="school">School</option>
+			        <option value="national">National</option>
+			        <option value="world" selected>World</option>
+			        <option value="opinion">Opinion</option>
+		        </select><br>
+
+		        <div class="moredivs">
+
+
+			        <div class="lead_and_body">
+						<label for="lead">Lead:</label> <br>
+						<textarea id="body" name="body" placeholder="Your Opening Paragraph.." required readonly> <%= readArticle[0].descriptions%> </textarea> <br>
+					</div>
+
+					<div class="lead_and_body">
+				        <label for="body">Body:</label><br>
+			      		<textarea id="body" name="body" placeholder="Write something.."  required readonly>
+			      		<%= readArticle[0].body%>
+			      		</textarea> <br>
+		      	
+		      		</div>
+		      	</div>
+
+	      		
+	      		<br>
+
+	      		<div class="button_container">
+	      			<button onclick="window.location.href='sample1_edit.html'" class="button button1" >Edit</button>
+	      			
+					
+					
+					<!-- Due to constraints in front end, delete function will be replaced by reset function -->
+					<button class="button button2" type="reset">Delete</button>
+				</div>
+		        
+
+		       	</form>
+		</div>
+	</div>
+
+
+	<style>
+		h1{
+    		padding: 20px 0;
+    		text-align: center;
+    		font-size: 3em;
+		}
+	</style>
+
+	<script>console.log(<%- JSON.stringify(readArticle)%>);</script>
+</body>
+</html>

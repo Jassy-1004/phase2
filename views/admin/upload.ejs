@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Archer's Network</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<img class="logo" src="images/arch_logo.png" alt="">
+
+		<nav>
+			
+			
+			<div class="menu">
+				<ul class="link">
+					<li><a href="admin_main_loggedin">Home</a></li>
+					<li><a href="upload">Upload</a></li>
+					<li><a href="admin_aboutus_loggedin">About Us</a></li>
+					<li><a href="login">Log Out</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+<!--COPY UP TO HERE!!!!!-->
+	<hr>
+
+	<div class ="current_projects">
+		<div class="current_projects_container">
+
+			<h2> Upload Article </h2>
+			<form action="submit_article" method="POST">
+				<div class="first_row">
+					<div class="headline">
+						<label for="headline">Headline:</label>
+						<input type="text" id="headline" name="headline" placeholder="Article name.." required>
+					</div>
+					
+					<div class="author">
+						<label for="byline">Written By:</label> 
+						<input type="text" id="byline" name="byline" placeholder="Your Name (First Name Last Name)" required>
+					</div>
+				</div>
+				<div class="second_row">
+					<div class="date">
+						<label for="datewritten">Date: </label> 
+						<input type="date" id="datewritten" name="datewritten" required>
+					</div>
+					
+					<div class="category">
+						<label for="category">Categories</label>
+						<select id="category" name="category" required>
+							<option value="null" disabled selected>Select your option</option>
+							<option value="school">School</option>
+							<option value="national">National</option>
+							<option value="world">World</option>
+							<option value="opinion">Opinion</option>
+						</select>
+					</div>
+				</div>
+				<div class="moredivs">
+					<div class="lead">
+						<label for="lead">Lead:</label> <br>
+						<textarea id="body" name="body" placeholder="Your Opening Paragraph.." required minlength="6"></textarea> <br>
+					</div>
+					<div class="body">
+						<label for="body">Body:</label><br>
+						<textarea id="body" name="body" placeholder="Write something.."  required></textarea> <br>  
+					</div>
+				</div>
+				
+
+	      		
+	      		<div class="button_container">
+	      			<button class="button" type="submit">Submit</button>
+					<button class="button" type="reset">Clear</button>
+				</div>
+		        
+
+		       	</form>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>

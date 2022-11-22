@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Archer's Network</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="javascript/articles.js"></script>
+</head>
+<body>
+	<header>
+		<img class="logo" src="images/arch_logo.png" alt="">
+
+		<nav>
+			<div class="search">
+				<input type="text" placeholder="Search" required>
+				<button>Search</button>
+			</div>
+			
+			<div class="menu">
+				<ul class="link">
+					<li><a href="user_main_loggedin">Home</a></li>
+					<li><a href="aboutus">About Us</a></li>
+					<li><a href="contactus_loggedin">Contact Us</a></li>
+					<li><a href="main">Log Out</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+<!--COPY UP TO HERE!!!!!-->
+	<section>
+		<div class= "container">
+			<center><h1>Welcome to <br> Archer's Network</h1></center>
+
+			<ul class="other-link">
+				<li><a onclick="showAll()">Latest Articles</a></li>
+				<li><a onclick="nationOnly()">Nation</a></li>
+				<li><a onclick="worldOnly()">Global</a></li>
+				<li><a onclick="schoolOnly()">School</a></li>
+				<li><a onclick="opinionOnly()">Opinion</a></li>
+			</ul>
+
+		</div>
+
+		<div class="container">
+				<div id="box">
+
+				<table>
+					 <thead> 
+					 	<tr>
+					 		<th> Title </th>
+					 		<th> Author</th>
+					 		<th> Date </th>
+					 		<th> Lead </th>
+					 		<th> Category </th>
+					 	</tr>
+					 </thead>
+
+					 <tbody id="table_body">
+					 	<% for (var i=0; i<usermain.length; i++) { %>
+					 		<tr class = "<%= usermain[i].category%>">
+					 			<td> <a href="read?id=<%= usermain[i].articleID%>"><%= usermain[i].title%></a> </td>
+					 			<td> <%= usermain[i].authors%> </td>
+					 			<td> <%= usermain[i].dates%> </td>
+					 			<td> <%= usermain[i].descriptions%> </td>
+					 			<td> <%= usermain[i].category%> </td>
+					 		</tr>
+
+					 	<% }%>
+					 </tbody>
+				</table>				
+				</div>
+			
+
+		</div>
+	</section>
+
+
+	<style>
+		h1{
+    		padding: 20px 0;
+    		text-align: center;
+    		font-size: 3em;
+		}
+
+
+		.other-link{
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			list-style: none;
+			
+		}
+
+		.other-link li a{
+			
+			display: inline-block;
+			padding: 0 10px;
+			font-size: 20px;
+
+		}
+		.other-link li a {
+			color: black;
+		}
+
+		.other-link li a:link {
+			text-decoration: none;
+		}
+
+		.other-link li a:visited {
+			text-decoration: none;
+		}
+
+		.other-link li a:hover {
+			text-decoration: underline;
+		}
+
+		.other-link li a:active {
+			text-decoration: underline;
+		}
+	</style>
+
+	<script>var articles = <%-JSON.stringify(usermain)%>;
+		
+		console.log(articles);
+	</script>
+</body>
+</html>

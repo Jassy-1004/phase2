@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Montserrat", serif;
+}
+
+/* Registration and Login */
+.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg,#233329,#63D471)
+
+}
+
+.container{
+    max-width: 770px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.container .title::before{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 710px;
+    background: linear-gradient(135deg,#0BAB64,#3BB78F);
+}
+
+.container .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-details .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 15px);
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #0BAB64
+}
+
+form .account-details .account-title{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+form .account-details .category{
+    display: flex;
+    width: 150%;
+    margin: 10px 2;
+    justify-content: space-between;
+}
+
+.account-details .category label{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+ 
+.account-details .category .dot{
+    padding-top: 5px;
+    height: 18px;
+    width: 18px;
+    background: #D3D3D3;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category .one,
+#dot-2:checked ~ .category .two{
+   border-color:#D9D9D9;
+   background: #1DD1A1;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+  
+form .button{
+    height: 45px;
+    margin: 20px 0;
+}
+  
+form .button input{
+    height: 100%;
+    width: 110%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #233329,#63D471);
+}
+  
+form .button input:hover{
+    background: #63D471;
+}
+
+.login-register{
+    margin-top: 35px;
+    font-size: 12px;
+}
+
+.login-btn {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #233329,#63D471);
+  }

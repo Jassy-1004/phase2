@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class ="container">
+		<div class="logo">
+			<img class="logo" src="images/arch_logo.png" alt="logo">
+		</div>
+
+		<div class="title"> Login </div>
+		<form onsubmit="return login() ">
+			<div class="user-details">
+
+				<!-- Username -->
+				<div class="input-box">
+					<span class="details">Username</span>
+					<input type="text" id="username" placeholder="Enter Username" required> 
+				</div>
+
+				<!-- Password -->
+				<div class="input-box">
+					<span class="details" >Password</span>
+					<input type="text" id="password" placeholder="Enter Password" required> 
+				</div>
+
+                <!-- Register -->
+				<div class="login-register">
+					<span class="text">Not yet Registered?
+						<a href="registration" class="text Register"> Register Now
+					</span>
+				</div>
+
+                <!-- Buttons -->
+				<div class="button">
+					<!-- <input type="button" class="login-btn" value="Login"/> -->
+                    <a class="login-btn" type="submit" onclick="login()" href="user_main_loggedin">Login</a>
+                </div>
+			</div>
+		</form>
+
+	</div>
+
+
+<script src="javaSCRT.js"> </script>
+
+</body>
+</html>

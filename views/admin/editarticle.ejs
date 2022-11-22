@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Archer's Network</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<img class="logo" src="images/arch_logo.png" alt="">
+
+		<nav>
+			
+			
+			<div class="menu">
+				<ul class="link">
+					<li><a href="main_loggedin.html">Home</a></li>
+					<li><a href="upload.html">Upload</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li><a href="contactus.html">Contact Us</a></li>
+					<li><a href="main.html">Log Out</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+<!--COPY UP TO HERE!!!!!-->
+<div class ="current_projects">
+		<div class="current_projects_container">
+
+	<h2> Edit Article 1 </h2>
+			<form onsubmit="return uploadArticle()">
+				<label for="headline">Headline:</label>
+				<input type="text" id="headline" name="headline" placeholder="Article name.." required value="Bleach  release date on Fall 2022">
+				  
+				<label for="byline">Written By:</label> 
+				<input type="text" id="byline" name="byline" placeholder="Kimi no Name" required value="Patrick Frye"><br>
+
+				<label for="datewritten">Date: </label> 
+				<input type="date" id="datewritten" name="datewritten" required value="2022-10-08">
+				
+
+				<label for="category">Categories</label>
+				<select id="category" name="category" required>
+					<option value="null" disabled>Select your option</option>
+			        <option value="school">School</option>
+			        <option value="national">National</option>
+			        <option value="world" selected>World</option>
+			        <option value="opinion">Opinion</option>
+		        </select><br>
+
+		        <div class="moredivs">
+
+
+			        <div class="lead_and_body">
+						<label for="lead">Lead:</label> <br>
+						<textarea id="body" name="body" placeholder="Your Opening Paragraph.." required > On October 3, 2022, VIZ Media officially announced that Bleach: Thousand-Year Blood War will be available to English-speaking fans in the United States on Hulu USA whereas the episodes will be streaming internationally on Disney+. </textarea> <br>
+					</div>
+
+					<div class="lead_and_body">
+				        <label for="body">Body:</label><br>
+			      		<textarea id="body" name="body" placeholder="Write something.."  required>
+			      		The Bleach: Thousand-Year Blood War Episode 1 ED special video features the music “Rapport” by Tatsuya Kitani. VIZ Media previously announced that the Bleach Season 17 episodes would be “simulcast” weekly. However, keep in mind that VIZ Media and Disney+ will be releasing details specific to each territory or region.
+			      		The situation is so confusing that many fans have claimed they’ll be turning to pirate sites. Crazily enough, Bleach Season 17 Episode 1 was leaked on torrent sites a day before the international premiere.
+
+
+			      		</textarea> <br>
+		      	
+		      		</div>
+		      	</div>
+
+	      		<label for="photos">Photos:</label><br>
+	      		<img src="images/article1.png" alt="Bleach" width="60%">
+	      		<br>
+
+	      		<div class="button_container">
+	      			
+	      			<a href="sample_edit.html">
+	      			<button class="button button1" type="submit">Save</button>
+	      			</a>
+					
+					<!-- Due to constraints in front end, delete function will be replaced by reset function -->
+					<button class="button button2" type="reset">Delete</button>
+				</div>
+		        
+
+		    </form>
+		</div>
+	</div>
+
+</body>
+</html>
